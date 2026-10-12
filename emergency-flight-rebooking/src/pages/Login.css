@@ -1,0 +1,353 @@
+/* =========================================================
+   SKYREBOOK - FULL SCREEN BEGINNER FRIENDLY UI (LOGIN PAGE)
+   ========================================================= */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR (FULL WIDTH) */
+.login-page .navbar {
+  width: 100%;
+  height: 64px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.login-page .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.login-page .logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page .logo h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.login-page .logo span {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* MAIN CONTAINER (FULL WIDTH) */
+.login-page .main-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 4%;
+  margin: 40px 0;
+  gap: 50px;
+  align-items: center;
+}
+
+/* INTRO SECTION */
+.intro-section .badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+  margin-right: 6px;
+}
+
+.intro-section h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.intro-section h1 span {
+  display: block;
+  color: #2563eb;
+}
+
+.intro-section p {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon.icon-blue { background: #eff6ff; border: 1px solid #bfdbfe; }
+.feature-icon.icon-green { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.feature-icon.icon-purple { background: #f3e8ff; border: 1px solid #e9d5ff; }
+
+.feature h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+}
+
+.feature p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* LOGIN CARD */
+.login-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 36px;
+  border: 1px solid #e2e8f0;
+}
+
+.login-heading h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.login-heading p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 20px 0;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.password-label a {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.password-label a:hover {
+  text-decoration: underline;
+}
+
+/* INPUT WITH ICON */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-with-icon .field-icon {
+  position: absolute;
+  left: 14px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.input-with-icon input {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px 0 42px !important;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  outline: none;
+}
+
+.input-with-icon input:focus {
+  border-color: #2563eb;
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 5;
+}
+
+.login-error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.remember label {
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider span {
+  position: relative;
+  background: #ffffff;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.create-btn {
+  width: 100%;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background: #f8fafc;
+}
+
+.terms {
+  text-align: center;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 16px;
+}
+
+.terms a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .login-page .main-container {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+  }
+}
